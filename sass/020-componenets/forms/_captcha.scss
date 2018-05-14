@@ -1,0 +1,22 @@
+.captcha{
+  background-color: #f2f2f2;
+  padding: 1rem;
+
+  .field-prefix{
+    display: inline-block;
+  }
+
+  input#edit-captcha-response{
+    display: inline-block;
+    width: 50px;
+  }
+
+  .form-item-captcha-response{
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,139 @@
+/// Accordion styles for FAQ moodule
+
+.ui-accordion {
+  font-family: $base-font-family;
+  // line-height: 1.5;
+  // margin-bottom: 2rem;
+  // border: 1px solid $green;
+
+  h3 {
+    // padding: 10px 15px 10px 50px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    // border-right: 1px solid $green !important;
+    // border-left: 1px solid $green !important;
+
+    &:not(:first-of-type) {
+      // border-bottom: 1px solid $green !important;
+    }
+
+    &:first-of-type {
+      // border-top: 1px solid $green !important;
+    }
+  }
+
+  .ui-accordion-content-active {
+    // border-right: 1px solid $green !important;
+    // border-left: 1px solid $green !important;
+    border-radius: 0 !important;
+
+    &:last-of-type {
+      // border-bottom: 1px solid $green !important;
+    }
+  }
+
+  .ui-accordion-header {
+    margin-top: 0;
+  }
+
+  .ui-widget-content {
+    border: 0;
+  }
+
+  .ui-accordion-content {
+    padding: 0 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .ui-state-default {
+    @extend %animate;
+
+    position: relative;
+    background: none;
+    // background-color: $yellow;
+
+    &:hover {
+      // background-color: darken($yellow, 5%);
+    }
+
+    &.ui-accordion-header-active {
+      // background-color: $green;
+
+      &:hover {
+        // background-color: lighten($green, 5%);
+      }
+    }
+
+    .ui-icon {
+      background-image: none;
+    }
+
+    .ui-accordion-header-icon {
+      left: 18px;
+    }
+
+    .ui-icon-triangle-1-e {
+      background: url('../images/arrows/icon-arrow-up.svg') no-repeat;
+    }
+
+    .ui-icon-triangle-1-s {
+      background: url('../images/arrows/icon-arrow-down.svg') no-repeat;
+    }
+  }
+
+  .ui-accordion-icons {
+    padding-left: 2.9em;
+  }
+
+  .ui-corner-all,
+  .ui-corner-top,
+  .ui-corner-right,
+  .ui-corner-tr {
+    border: 0;
+    border-radius: 0 !important;
+
+    &:not(:last-of-type) {
+      // border-bottom: 1px solid $green;
+    }
+  }
+}
+
+/// Accordion styles for CKEditor accordions
+
+.ckeditor-accordion-container {
+
+  p {
+    font-size: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
+  }
+
+  .ckeditor-accordion-toggler{
+    font-weight: 700;
+  }
+
+  > dl {
+    border: 1px solid darken($color__primary, 5%);
+
+
+    dt.active {
+      > a {
+        //active tab b color
+        background-color: $color__primary;
+      }
+    }
+  }
+
+  dl dt > a {
+    background-color: $color__primary;
+    border-bottom-color: darken($color__primary, 5%);
+
+    &:hover {
+      background-color: darken($color__primary, 5%);
+    }
+  }
+}

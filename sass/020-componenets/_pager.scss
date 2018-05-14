@@ -1,0 +1,44 @@
+ul.pager,
+ul.pager__items,
+ul.pagination {
+  padding: 1rem 1rem 1rem 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    padding: 0;
+    padding-top: 1.2rem;
+    margin: 0;
+    font-size: .8rem;
+    list-style: none;
+
+    a {
+      padding: .5rem 1rem;
+      margin: 0;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: white;
+      background-color: $color__secondary;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom: 1px solid transparent;
+        background-color: darken($color__secondary, 8%);
+      }
+    }
+  }
+
+  li.pager-current {
+    padding: .5rem 1rem;
+    color: #fff;
+    background-color: #0e86c1;
+  }
+}
+
+
+nav.pager{
+  text-align: center;
+}

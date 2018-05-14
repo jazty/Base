@@ -1,0 +1,50 @@
+/// Clearfix hack for wrapping elements around their floated children
+///
+/// @group placeholders
+///
+/// @example
+/// 	@extend %cf;
+///
+
+%cf {
+  @include cf;
+}
+
+%cf-importnat {
+  @include cf-important;
+}
+
+%lsn {
+  list-style: none;
+}
+
+%animate {
+  transition: all .2s;
+}
+
+
+// Accessibility utility classes
+%visually-hidden {
+  @include visually-hidden;
+}
+
+%visually-hidden-off {
+  @include visually-hidden-off;
+}
+
+%focusable {
+  @extend %visually-hidden;
+
+  &:active,
+  &:focus {
+    @extend %visually-hidden-off;
+  }
+}
+
+%hidden {
+  @include hidden;
+}
+
+%invisible {
+  @include invisible;
+}

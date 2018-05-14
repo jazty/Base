@@ -1,0 +1,50 @@
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  line-height: normal;
+  margin: 1px \9 0 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="checkbox"]:checked + label {
+  background-image: url("../images/checkboxes/icon-checkbox-checked.svg");
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+
+  ///IE10 hack
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    background-image: url("../images/checkboxes/icon-checkbox-checked.png");
+    background-size: 21px 21px;
+  }
+}
+
+input[type="checkbox"] + label {
+  background-image: url("../images/checkboxes/icon-checkbox.svg");
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+
+  ///IE10 hack
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    background-image: url("../images/checkboxes/icon-checkbox.png");
+    background-size: 21px 21px;
+  }
+}
+
+input[type="checkbox"] + label {
+  display: inline;
+  font-weight: 400;
+  padding: 0 0 0 26px;
+}
+
+.form-item--checkbox{
+
+}

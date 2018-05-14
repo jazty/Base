@@ -1,0 +1,75 @@
+
+.l-prefix{
+  @include span(12 of 12);
+}
+
+.l-postfix{
+  @include span(12 of 12);
+}
+
+.l-main{
+  @extend %cf;
+}
+
+///Sticky footer flexbox styles
+
+html {
+  height: 100%;
+}
+
+
+.l-container {
+  //Sticky footer
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.l-main {
+  //Sticky footer
+  flex: 1 0 auto;
+}
+
+.l-sidebar-second{
+  @include mappy-bp(1024px){
+    clear: left;
+  }
+}
+
+@include with-layout($sidebars-gutter) {
+
+  .l-sidebar-first {
+    @include span(12 of 12);
+    @include mappy-bp(1024px) {
+       @include span(first 3.5 of 12);
+    }
+
+    .no-sidebars &{
+       @include span(12 of 12);
+    }
+  }
+
+  .l-sidebar-second {
+    @include span(12 of 12);
+
+    @include mappy-bp(1024px) {
+       @include span(first 3.5 of 12);
+    }
+
+    .no-sidebars &{
+       @include span(12 of 12);
+    }
+  }
+
+  .l-content {
+    @include span(12 of 12);
+
+    @include mappy-bp(1024px) {
+       @include span(last 8.5 of 12);
+    }
+
+    .no-sidebars &{
+       @include span(12 of 12);
+    }
+  }
+}

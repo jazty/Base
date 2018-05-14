@@ -1,0 +1,19 @@
+
+.form-item--vertical-tabs {
+  .vertical-tabs__menu {
+    border-top: 1px solid $color__fieldset-border--normal;
+    border-left: 1px solid $color__fieldset-border--normal;
+    border-bottom: 1px solid $color__fieldset-border--normal;
+  }
+
+  li {
+    &.is-selected {
+      text-transform: uppercase;
+      background-color: white;
+
+      .vertical-tabs__menu-item-title {
+        color: $color__primary;
+      }
+    }
+  }
+}

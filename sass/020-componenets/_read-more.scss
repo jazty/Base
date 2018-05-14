@@ -1,0 +1,19 @@
+
+
+ul.links {
+  padding: 0;
+  margin: 0;
+
+  li.node-readmore {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    a {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      border-bottom: 1px solid transparent;
+    }
+  }
+}

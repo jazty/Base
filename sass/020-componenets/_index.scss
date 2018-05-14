@@ -1,0 +1,18 @@
+////////////////////////
+// Module Partials
+//
+// Your SMACSS Modules go here
+// Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
+////////////////////////
+
+
+@import 'pager';
+@import 'tables';
+@import 'read-more';
+@import 'nav/index';
+@import "forms/index";
+// @import "accordion-option1";
+@import "custom-blocks/index";
+@import "paragraphs/index";
+@import "media/index";
+// @import 'accordion-option2';

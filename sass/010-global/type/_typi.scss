@@ -1,0 +1,61 @@
+$modularscale: (
+  base: 16px,
+  ratio: 1.067
+);
+
+$typi: (
+
+  base: (
+    null: (15px, 1.4),
+    med: (16px),
+    large: (17px)
+  ),
+
+  h1: (
+    null:  (ms(7), 1.3),
+    land:  (ms(8)),
+    med:   (ms(9), 1.2),
+    large: (ms(10)),
+    wide:  (ms(11), 1.2)
+  ),
+
+  h2: (
+    null:  (ms(5), 1.3),
+    land:  (ms(6)),
+    med:   (ms(7), 1.2),
+    large: (ms(8)),
+    wide:  (ms(9), 1.2)
+  ),
+
+  h3: (
+    null:  (ms(3), 1.3),
+    land:  (ms(4)),
+    med:   (ms(5), 1.4),
+    large: (ms(6)),
+    wide:  (ms(7), 1.5)
+  ),
+
+  h4: (
+    null:  (ms(1), 1.3),
+    land:  (ms(2)),
+    med:   (ms(3), 1.2),
+    large: (ms(4)),
+    wide:  (ms(5), 1.2)
+  ),
+
+  h5: (
+    null:  (ms(-1), 1.3),
+    land:  (ms(0)),
+    med:   (ms(1), 1.2),
+    large: (ms(2)),
+    wide:  (ms(3), 1.2)
+  ),
+
+  h6: (
+    null:  (ms(-3), 1.3),
+    land:  (ms(-2)),
+    med:   (ms(-1), 1.2),
+    large: (ms(0)),
+    wide:  (ms(1), 1.2)
+  ),
+);

@@ -1,0 +1,85 @@
+input[type="date"],
+input[type="email"],
+input[type="file"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+  border: 0;
+  border: 1px solid $color__input-border--normal;
+  max-width: 100%;
+  padding: .5em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+  height: 2.75em;
+}
+
+input[type="search"],
+select {
+  appearance: none;
+  border: 0;
+  border: 1px solid $color__input-border--normal;
+  border-radius: 0;
+}
+
+input,
+textarea{
+  appearance: none;
+  border-radius: 0;
+}
+
+select {
+  background: url(../images/arrows/icon__arrow—down.svg) no-repeat;
+  background-color: #FFFFFF;
+  background-position: 95%;
+  background-size: 1em;
+  padding-right: 2.2rem;
+}
+
+
+select,
+input[type="radio"]:hover,
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+
+*:focus,
+*[aria-expanded="true"],
+button,
+.btn,
+a.btn,
+a.btn:hover,
+a.btn:focus {
+  transition: ease-in .2s;
+}
+
+input,
+textarea {
+  &:focus,
+  &:active {
+    color: #444444;
+    outline-color: #CCCCCC;
+  }
+}
+
+input:required:focus {
+  outline-color: $color__input-border--focus;
+}
+
+input.required-error,
+input.required-error:focus {
+  border: 2px solid $color__input-border--focus;
+  outline-color: $color__input-border--focus;
+}

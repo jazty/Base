@@ -1,0 +1,27 @@
+name:                 BASE
+type:                 theme
+description:          Base Drupal 8 Theme.
+VERISON:              1.1
+package:              Core
+core:                 8.x
+base theme:           stable
+screenshot:           screenshot.svg
+
+#Libraries
+libraries:
+  - base/global
+
+#CKEditor styles
+ckeditor_stylesheets:
+  - css/ckeditor.css
+
+#Regions
+regions:
+  header:             Header
+  navigation:         Navigation
+  prefix:             Prefix
+  sidebar_first:      First sidebar
+  content:            Content
+  postfix:            Postfix
+  pre_footer:         Pre Footer
+  footer:             Footer

@@ -1,0 +1,90 @@
+// @file
+// Styles for messages.
+
+.messages {
+  margin-bottom: vr(1);
+  background-color: #ecf6fa;
+  // border: 1px solid #bcdeee;
+  color: #424242;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  word-wrap: break-word;
+  font-family: $system-font-family !important;
+
+
+  background-repeat: no-repeat;
+  background-size: 55px 55px;
+  background-position: 101.2%  -5px;
+
+
+  a {
+    color: #bcdeee;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: $system-font-family !important;
+  }
+
+
+}
+
+.messages__content {
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.messages--error {
+  background-color: #ffe6e5;
+  border-color: #ffc5c2;
+  background-image: url('../images/bg/messages-error.svg');
+
+  &::before {
+    // background-image: url('../images/bg/messages-error.svg');
+  }
+
+  a {
+    color: #ff645c;
+  }
+
+  .messages__item {
+    em:first-child {
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
+}
+
+.messages--status {
+  background-color: #eff8e6;
+  border-color: #c9e8a9;
+  background-image: url('../images/bg/messages-status.svg');
+
+  &::before {
+    // @include svg-background(messages-status);
+    // background-image: url('../images/bg/messages-status.svg');
+    // background-image: url('../images/bg/messages-status.png');
+
+  }
+
+  a {
+    color: #71b02f;
+    font-family: $system-font-family !important;
+  }
+}
+
+.messages--warning {
+  background-color: #fcf8e3;
+  border-color: #faf2cc;
+  background-image: url('../images/bg/messages-warning.svg');
+
+  &::before {
+    // @include svg-background(messages-warning);
+    // background-image: url('../images/bg/messages-status.png');
+  }
+
+  a {
+    color: #8a6d3b;
+    font-family: $system-font-family !important;
+  }
+}

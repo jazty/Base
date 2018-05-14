@@ -1,0 +1,64 @@
+
+.form-item-search-block-form {
+  display: inline-block;
+}
+
+select + button,
+select + .btn,
+select + button:hover,
+select + .btn:hover,
+select + button:focus,
+select + .btn:focus,
+input + button,
+input + .btn,
+input + button:hover,
+input + .btn:hover,
+input + button:focus,
+input + .btn:focus {
+  border-bottom: 0;
+  border-radius: 0;
+}
+
+
+input[type='submit'] {
+  // margin-right: .5rem !important;
+}
+
+input[type='submit'],
+#edit-cancel {
+  @extend %animate;
+
+  padding: .55rem;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  margin-left: -4px;
+  font-size: .8rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .08rem;
+  cursor: pointer;
+  background-color: $color__submit-bkg--normal;
+  border: 3px solid $color__submit-border--normal;
+  border-radius: 0;
+
+  appearance: 0;
+
+  &:hover {
+    background-color: darken($color__submit-bkg--normal, 5%);
+    border: 3px solid darken($color__submit-border--normal, 5%);
+  }
+}
+
+#edit-cancel {
+  color: $color__text--dark;
+  background-color: white;
+  border: 3px solid $color__text--dark;
+
+  &:hover {
+    color: $color__text--white;
+    background-color: $color__text--dark;
+    border: 3px solid $color__text--dark;
+  }
+}

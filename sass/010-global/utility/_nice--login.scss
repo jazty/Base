@@ -1,0 +1,25 @@
+
+.wrapper-nice-login{
+  border-radius: 0;
+
+ margin: 0 auto;
+ max-width: 500px;
+ margin-top: 2rem;
+
+ .nice-login-pass{
+   width: 100%;
+   margin-bottom: 1rem;
+   font-size: .8rem;
+
+   @include mappy-bp(med){
+      width: auto;
+      margin-bottom: 0;
+   };
+
+ }
+
+ .nice-login-login{
+   margin-top: .25rem;
+ }
+
+}
