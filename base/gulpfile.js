@@ -13,6 +13,7 @@ var plumber = require('gulp-plumber');
 var log = require('fancy-log');
 var colors = require('ansi-colors');
 var notify = require('gulp-notify');
+var exec = require('child_process').exec;
 
 if (domain == 'auto') {
   // Attempt to automatically get the domain name from Dev Desktop's config files.
@@ -26,19 +27,21 @@ if (domain == 'auto') {
 }
 
 gulp.task('serve', function() {
-
-  gulp.watch("sass/**/*.scss", gulp.series(['sass']));
-
   // Skip BrowserSync init if no domain is provided.
   if (domain) {
     browserSync.init({
       proxy: domain
       // browser:     "google chrome"
     });
-
-    gulp.watch("templates/**/*.twig").on('change', browserSync.reload);
-    gulp.watch('js/*.js').on('change', browserSync.reload);
   }
+
+  gulp.watch("sass/**/*.scss", gulp.series(['sass']));
+  gulp.watch("templates/**/*.twig").on('change', gulp.series(['clearDrupalCache', 'browserSyncReload']));
+  gulp.watch('js/*.js').on('change', gulp.series(['browserSyncReload']));
+});
+
+gulp.task('browserSyncReload', function() {
+  return browserSync.reload();
 });
 
 gulp.task('sass', function() {
@@ -82,6 +85,18 @@ gulp.task('sass', function() {
   }
 
   return stream;
+});
+
+gulp.task('clearDrupalCache', function(done) {
+  drushCmd = 'drush cc render';
+
+  if (drushCmd) {
+    exec(drushCmd, function (err, stdout, stderr) {
+      log(stdout);
+      log(stderr);
+      done();
+    });
+  }
 });
 
 gulp.task('default', gulp.series(['sass', 'serve']));
