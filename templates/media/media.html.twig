@@ -20,8 +20,9 @@
   ]
 %}
 
-<article{{ attributes.addclass(classes)|without('role') }}>
-  {% if content %}
-    {{ content }}
-  {% endif %}
-</article>
+<div{{ attributes.addclass(classes)|without('role') }}>
+    {% if content %}
+        {{ title_suffix.contextual_links }}
+        {{ content }}
+    {% endif %}
+</div>
